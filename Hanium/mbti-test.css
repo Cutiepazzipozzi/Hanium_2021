@@ -1,0 +1,107 @@
+body{
+    display: flex;
+    justify-content: center;
+    background-color: rgb(235, 235, 235);
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+
+.main_box {
+    display: flex;
+    flex-direction: column;
+    width: 1000px;
+    background-color: white;
+    padding: 0px 45px;
+    overflow:scroll;
+}
+
+.top_box {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 70px;
+}
+
+.q1 {
+    margin-bottom: 30px;
+    font-size: 25px;
+}
+
+.q2 {
+    margin-bottom: 30px;
+    font-size: 25px;
+}
+
+.q3 {
+    margin-bottom: 30px;
+    font-size: 25px;
+}
+
+.q4 {
+    margin-bottom: 30px;
+    font-size: 25px;
+}
+
+.q5 {
+    margin-bottom: 30px;
+    font-size: 25px;
+}
+
+.Ans1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Ans2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Ans3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Ans4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Ans5 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.answer {
+    width: 630px;
+    padding: 16px 0px;
+    margin-bottom: 9px;
+    font-size: 18px;
+}
+
+.button_box {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.button_box1 {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.next_button{
+    margin-top: 115px;
+    padding: 15px 30px;
+}
+
+.prev_button{
+    margin-top: 115px;
+    padding: 15px 30px;
+}

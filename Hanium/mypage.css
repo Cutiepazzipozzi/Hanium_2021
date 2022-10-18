@@ -1,0 +1,15 @@
+.top {
+display:flex;
+text-align:center;
+}
+
+.setting {
+flex-direction:row;
+}
+
+
+.edit_info {
+text-align: center;
+height: 30px;
+}
+

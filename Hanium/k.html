@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Jua', sans-serif;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <title>Kochat_demo</title>
+
+    <script src="C:\Users\sk000\kochat\demo\static\js\query.js" type="text/javascript"></script>
+    <script src="C:\Users\sk000\kochat\demo\static\js\bootstrap.js" type="text/javascript"></script>
+    <script src="C:\Users\sk000\kochat\demo\static\js\main.js" type="text/javascript"></script>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <script>
+        greet();
+        onClickAsEnter();
+    </script>
+    <script src="C:\Users\sk000\Desktop\WEB\kochat-p\k.js"></script>
+    <link rel="stylesheet" href="k.css">
+    <!------ Include the above in your HEAD tag
+    <script src="{{ url_for('static', filename="js/query.js") }}" type="text/javascript"></script>
+    <script src="{{ url_for('static', filename="js/bootstrap.js") }}" type="text/javascript"></script>
+    <script src="{{ url_for('static', filename="js/main.js") }}" type="text/javascript"></script>
+
+    <link href="{{ url_for('static', filename="css/bootstrap.css") }}" rel="stylesheet" id="bootstrap-css">
+    <link href="{{ url_for('static', filename="css/main.css") }}" rel="stylesheet" id="main-css">
+     ---------->
+</head>
+
+
+<body>
+<div class="chat_window">
+    <div class="top_menu">
+        <div class="buttons">
+            <div class="button close"></div>
+            <div class="button minimize"></div>
+            <div class="button maximize"></div>
+        </div>
+        <div class="title">채팅</div>
+    </div>
+    <ul class="messages"></ul>
+    <div class="bottom_wrapper clearfix">
+        <div class="message_input_wrapper">
+            <input class="message_input"
+            onkeyup="return onClickAsEnter(event)"
+            placeholder="메시지를 입력하세요!">
+            </div>
+
+        <div class="send_message"
+             id="send_message"
+            onclick="onSendButtonClicked()">
+
+            <div class="icon"></div>
+            <div class="text">전송</div>
+        </div>
+    </div>
+</div>
+<div class="message_template">
+    <ol>
+        <li class="message">
+            <div class="avatar"></div>
+            <div class="text_wrapper">
+                <div class="text"></div>
+            </div>
+        </li>
+    </ol>
+
+</div>
+</body>
+</html>

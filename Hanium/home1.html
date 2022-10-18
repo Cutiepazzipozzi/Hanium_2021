@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en" style="background-color:white">
+
+<head>
+    <meta charset="utf-8">
+    <title>mainpage</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Jua', sans-serif;
+        }
+    </style>
+    <link rel="stylesheet" href="home1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" >
+
+    <script src="C:\Users\sk000\kochat\demo\static\js\query.js" type="text/javascript"></script>
+    <script src="C:\Users\sk000\kochat\demo\static\js\bootstrap.js" type="text/javascript"></script>
+    <script src="C:\Users\sk000\kochat\demo\static\js\main.js" type="text/javascript"></script>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <script>
+        greet();
+        onClickAsEnter();
+    </script>
+    <script src="C:\Users\sk000\Desktop\WEB\kochat-p\k.js"></script>
+    <link rel="stylesheet" href="k.css">
+</head>
+
+<body>
+    <div class="topBox" >
+        <!--<div class="photo">
+             <img src="01.jpg">;-->
+             <div class="search">
+            <form name=search method=get style="display: flex; justify-content: center;" action="https://www.google.com/search" target="_blank">
+                <input type=hidden name=where value="reteach">
+                <input name=query required value="" size="33" placeholder="검색어를 입력하세요!">
+                <input type="submit" id="sBox" class="fa fas-search" width='40' height='20' value="&#xf002" style="border: 0px; font-size: 15px; vertical-align: middle; padding: 0;">
+            </form>
+        </div>
+    </div>
+
+
+        <!--
+        <script type="text/javascript">
+
+        var hour=function() {
+            var fname="";
+            var today=new Date();
+            var hh=today.getHours();
+            if(hh>=0 && hh<4) {fname="01.jpg";}
+            else if(hh>=4 && hh<12) {fname="02.jpg";}
+            else if(hh>=12 && hh<18) {fname="03.jpg";}
+            else if(hh>=18 && hh<24) {fname="04.jpg";}
+            document.getElementById("time").src=fname;
+        }
+        -->
+        <!--
+            var day=new Date()
+            var x=day.getHours()
+            if(x>=0 && x<4) { //밤 12시 부터 새벽 4시
+            document.write('<img src="https://cdn.pixabay.com/photo/2018/11/17/22/15/trees-3822149_960_720.jpg" WIDTH="100%" HEIGHT="100%" background-size="cover">')
+            }
+            else if(x>=4 && x<12) { //새벽 4시부터 낮 12시
+            document.write('<img src="https://cdn.pixabay.com/photo/2018/02/05/23/05/death-valley-3133502_960_720.jpg"  WIDTH="100%" HEIGHT="100%" background-size="cover">')
+            }
+            else if(x>=12 && x<18) { //낮 12시부터 오후 6시
+            document.write('<img src="https://cdn.pixabay.com/photo/2017/04/10/15/06/cherry-blossoms-2218781_960_720.jpg" WIDTH="100%" HEIGHT="100%" background-size="cover">')
+            }
+            else if (x>=18 && x<24) { //오후 6시부터 밤 12시
+            document.write('<img src="https://cdn.pixabay.com/photo/2016/12/17/14/33/wave-1913559_960_720.jpg"  WIDTH="100%" HEIGHT="100%" object-fit="cover">')
+            }
+            -->
+        </script>
+    </div>
+    <div class="bottomBox">
+        <div class="leftBox">
+            <div class="login">
+                <form>
+                    <input type="email" name="id" class="text-field" placeholder="아이디"><br>
+                    <input type="password" name="password" class="text-field" placeholder="비밀번호"><br>
+                    <input type="submit" name="submit" class="text-field" Onclick="location.href='home2.html'"><br>
+                    <input type="url" value="마이페이지" class="mypage" Onclick="location.href='mypage.html'">
+                    <input type="url" value="회원가입" class="new" onClick="location.href='new.html'">
+                </form>
+            </div>
+            <p class="p1"><a href="mbti-test.html">재미로 보는 mbti별 여행지</a></p>
+            <p class="p2"><a href="">이달의 여행지</a></p>
+            <div class="class position">
+
+                <script src="http://maps.googleapis.com/maps/api/js?v=3.3&sensor=false"></script>
+                <script type="text/javascript">
+                        var map, watchId;
+                        function startWatchPosition() {
+                            watchId = navigator.geolocation.watchPosition(function (position) { //일정한 시간단위로 함수를 주기적으로 부름
+                                var coords = position.coords;
+                                var mapCenter = new google.maps.LatLng(coords.latitude, coords.longitude);
+                                if (!map) {
+                                    map = new google.maps.Map(document.getElementById("map"), {
+                                        center: mapCenter,
+                                        mapTypeId: google.maps.MapTypeId.ROADMAP,
+                                        zoom: 15
+                                    });
+                                }
+                                var time = new Date();
+                                time.setTime(position.timestamp);
+                                var title = time.getHours() + ":" + time.getMinutes() + ":" + time.getSeconds(); //이름
+
+                                var marker = new google.maps.Marker({ //찍히는 좌표
+                                    position: mapCenter,
+                                    title: title,
+                                    map: map
+                                });
+                                map.setCenter(mapCenter);
+                            }, onPositionError, {
+                                enableHighAccuracy: true
+                            });
+                            var buttons = document.getElementsByTagName("button");
+                            buttons[0].disabled = true;
+                            buttons[1].disabled = false;
+                        }
+
+                        function stopWatchPosition() {
+                            navigator.geolocation.clearWatch(watchId);
+                            var buttons = document.getElementsByTagName("button");
+                            buttons[0].disabled = false, buttons[1].disabled = true;
+                            alert("위치 정보 수집 종료");
+                        }
+
+                        function onPositionError(error) {
+                            alert("위치정보수집에러:" + error.message);
+                        }
+
+
+                        navigator.geolocation.getCurrentPosition(onSuccess, onError, {
+                            maximumAge: 30000,
+                            timeout: 0
+                        });
+                        function onError(error) {
+                            if (error === error.TIMEOUT) {
+                                alert("시간이 초과되었습니다..");
+                            } else {
+                                alert("기타 에러 발생");
+                            }
+                        }
+                    </script>
+
+                <body onload="startWatchPosition()">
+                <div id="map" style="width:500px; height:300px">
+                    지도 초기화
+                </div>
+                <button onclick="startWatchPosition()" disabled>
+                    시작
+                </button>
+                <button onclick="stopWatchPosition()" disabled>
+                    중지
+                </button>
+                </body>
+            </div>
+        </div>
+
+        <div class="chat_bot">
+            <div class="chat_window">
+                <div class="top_menu">
+                    <div class="buttons">
+                        <div class="button close"></div>
+                        <div class="button minimize"></div>
+                        <div class="button maximize"></div>
+                    </div>
+                    <div class="title">채팅</div>
+                </div>
+                <ul class="messages"></ul>
+                <div class="bottom_wrapper clearfix">
+                    <div class="message_input_wrapper">
+                        <input class="message_input"
+                               onkeyup="return onClickAsEnter(event)"
+                               placeholder="메시지를 입력하세요!">
+                    </div>
+
+                    <div class="send_message"
+                         id="send_message"
+                         onclick="onSendButtonClicked()">
+
+                        <div class="icon"></div>
+                        <div class="text">전송</div>
+                    </div>
+                </div>
+            </div>
+            <div class="message_template">
+                <ol>
+                    <li class="message">
+                        <div class="avatar"></div>
+                        <div class="text_wrapper">
+                            <div class="text"></div>
+                        </div>
+                    </li>
+                </ol>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
